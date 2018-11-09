@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType></DebugType>
+    <DocumentationFile>bin\Release\netstandard2.0\Plugin.FirebaseAnalytics.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.2" />
+  </ItemGroup>
+  <Import Project="..\Plugin.FirebaseAnalytics.Shared\Plugin.FirebaseAnalytics.Shared.projitems" Label="Shared" Condition="Exists('..\Plugin.FirebaseAnalytics.Shared\Plugin.FirebaseAnalytics.Shared.projitems')" />
+</Project>

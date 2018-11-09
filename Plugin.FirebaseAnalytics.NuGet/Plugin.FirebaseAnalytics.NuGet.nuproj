@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{31F05FB9-ABD7-416E-B891-6634505B18FB}</ProjectGuid>
+    <Description>Plugin.FirebaseAnalytics</Description>
+    <PackageId>Plugin.FirebaseAnalytics</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>f-matsushima</Authors>
+    <DevelopmentDependency>false</DevelopmentDependency>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Plugin.FirebaseAnalytics</RootNamespace>
+    <UsePartialTypes>false</UsePartialTypes>
+    <AssemblyName>Plugin.FirebaseAnalytics.NuGet</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Plugin.FirebaseAnalytics.Android\Plugin.FirebaseAnalytics.Android.csproj">
+      <Project>{DBEE5650-8F75-4DBF-A647-C18A8E53103B}</Project>
+      <Name>Plugin.FirebaseAnalytics.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Plugin.FirebaseAnalytics.iOS\Plugin.FirebaseAnalytics.iOS.csproj">
+      <Project>{76ADD885-1C58-4499-AF76-027A51B320CF}</Project>
+      <Name>Plugin.FirebaseAnalytics.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Plugin.FirebaseAnalytics\Plugin.FirebaseAnalytics.csproj">
+      <Project>{B143E94D-2EA0-47F3-83F8-FF193DF8855B}</Project>
+      <Name>Plugin.FirebaseAnalytics</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NuGet.Build.Packaging">
+      <Version>0.2.2</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />
+</Project>
