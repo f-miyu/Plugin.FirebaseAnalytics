@@ -11,20 +11,27 @@ namespace Plugin.FirebaseAnalytics.Sample.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
-        public ICommand Command { get; }
+        public ICommand SendEventCommand { get; }
+        public ICommand GoToSecondPageCommand { get; }
 
         public MainPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
             Title = "Main Page";
 
-            Command = new DelegateCommand(() =>
+            SendEventCommand = new DelegateCommand(() =>
             {
-                CrossFirebaseAnalytics.Current.LogEvent(EventName.ViewItem,
-                                                        new Parameter("aaa", 1),
-                                                        new Parameter("bbb", 1.5),
-                                                        new Parameter("ccc", "ddd"));
+                CrossFirebaseAnalytics.Current.LogEvent(EventName.SelectContent,
+                                                        new Parameter(ParameterName.ItemId, 1),
+                                                        new Parameter(ParameterName.ItemName, "test"));
             });
+
+            GoToSecondPageCommand = new DelegateCommand(() => NavigationService.NavigateAsync("SecondPage"));
+        }
+
+        public override void OnAppearing()
+        {
+            CrossFirebaseAnalytics.Current.SetCurrentScreen(Title, nameof(MainPageViewModel));
         }
     }
 }

@@ -4,10 +4,11 @@ using Prism.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Prism.AppModel;
 
 namespace Plugin.FirebaseAnalytics.Sample.ViewModels
 {
-    public class ViewModelBase : BindableBase, INavigationAware, IDestructible
+    public class ViewModelBase : BindableBase, INavigationAware, IDestructible, IPageLifecycleAware
     {
         protected INavigationService NavigationService { get; private set; }
 
@@ -39,6 +40,16 @@ namespace Plugin.FirebaseAnalytics.Sample.ViewModels
         }
 
         public virtual void Destroy()
+        {
+
+        }
+
+        public virtual void OnAppearing()
+        {
+
+        }
+
+        public virtual void OnDisappearing()
         {
 
         }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding Title}"
+             x:Class="Plugin.FirebaseAnalytics.Sample.Views.SecondPage">
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
+        <Entry Text="{Binding Name}" Placeholder="name"  />
+        <Button Text="Send User Property" Command="{Binding SendUserPropertyCommand}" />
+    </StackLayout>
+</ContentPage>

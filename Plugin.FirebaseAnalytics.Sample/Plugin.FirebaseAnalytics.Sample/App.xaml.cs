@@ -30,6 +30,7 @@ namespace Plugin.FirebaseAnalytics.Sample
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<SecondPage, SecondPageViewModel>();
         }
     }
 }
