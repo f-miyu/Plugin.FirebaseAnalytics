@@ -52,7 +52,7 @@ CrossFirebaseAnalytics.Current.SetCurrentScreen(screenName, screenClass));
 var id = await CrossFirebaseAnalytics.Current.GetAppInstanceIdAsync();
 ```
 
-### Set parameters for only Android.
+### Set parameters for Android
 ```C#
 Plugin.FirebaseAnalytics.FirebaseAnalytics.SetAnalyticsCollectionEnabled(enabled);
 
