@@ -5,10 +5,10 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{31F05FB9-ABD7-416E-B891-6634505B18FB}</ProjectGuid>
-    <Description>Plugin.FirebaseAnalytics</Description>
+    <Description>Cross platform plugin for Firebase Analytics</Description>
     <PackageId>Plugin.FirebaseAnalytics</PackageId>
     <PackageVersion>1.0.0</PackageVersion>
-    <Authors>f-matsushima</Authors>
+    <Authors>f-miyu</Authors>
     <DevelopmentDependency>false</DevelopmentDependency>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <OutputType>Exe</OutputType>
@@ -16,6 +16,11 @@
     <UsePartialTypes>false</UsePartialTypes>
     <AssemblyName>Plugin.FirebaseAnalytics.NuGet</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <Owners>f-miyu</Owners>
+    <PackageTags>xamarin, ios, android, xamarin.forms, plugin, firebase, analytics</PackageTags>
+    <Title>Firebase Analytics Plugin for Xamarin</Title>
+    <PackageProjectUrl>https://github.com/f-miyu/Plugin.FirebaseAnalytics</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/f-miyu/Plugin.FirebaseAnalytics/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
