@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Android.OS;
+using Plugin.CurrentActivity;
 
 namespace Plugin.FirebaseAnalytics
 {
@@ -11,7 +12,7 @@ namespace Plugin.FirebaseAnalytics
         {
             var tcs = new TaskCompletionSource<string>();
 
-            FirebaseAnalytics.Instance.AppInstanceId.AddOnCompleteListener(new OnCompleteHandlerListener(task =>
+            AnalyticsProvider.GetAnalytics().GetAppInstanceId().AddOnCompleteListener(new OnCompleteHandlerListener(task =>
             {
                 if (task.IsSuccessful)
                 {
@@ -48,22 +49,27 @@ namespace Plugin.FirebaseAnalytics
                 }
             }
 
-            FirebaseAnalytics.Instance.LogEvent(name, bundle);
+            AnalyticsProvider.GetAnalytics().LogEvent(name, bundle);
         }
 
         public void SetCurrentScreen(string screenName, string screenClass)
         {
-            FirebaseAnalytics.Instance.SetCurrentScreen(FirebaseAnalytics.CurrentActivity, screenName, screenClass);
+            AnalyticsProvider.GetAnalytics().SetCurrentScreen(CrossCurrentActivity.Current.Activity, screenName, screenClass);
         }
 
         public void SetUserId(string userId)
         {
-            FirebaseAnalytics.Instance.SetUserId(userId);
+            AnalyticsProvider.GetAnalytics().SetUserId(userId);
         }
 
         public void SetUserProperty(string name, string value)
         {
-            FirebaseAnalytics.Instance.SetUserProperty(name, value);
+            AnalyticsProvider.GetAnalytics().SetUserProperty(name, value);
+        }
+
+        public void ResetAnalyticsData()
+        {
+            AnalyticsProvider.GetAnalytics().ResetAnalyticsData();
         }
     }
 }

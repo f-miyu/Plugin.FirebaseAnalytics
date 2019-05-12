@@ -19,6 +19,7 @@ namespace Plugin.FirebaseAnalytics
         public static readonly string Currency = "currency";
         public static readonly string Destination = "destination";
         public static readonly string EndDate = "end_date";
+        public static readonly string ExtendSession = "extend_session";
         public static readonly string FlightNumber = "flight_number";
         public static readonly string GroupId = "group_id";
         public static readonly string Index = "index";
@@ -30,8 +31,10 @@ namespace Plugin.FirebaseAnalytics
         public static readonly string ItemList = "item_list";
         public static readonly string ItemVariant = "item_variant";
         public static readonly string Level = "level";
+        public static readonly string LevelName = "level_name";
         public static readonly string Location = "location";
         public static readonly string Medium = "medium";
+        public static readonly string Method = "medium";
         public static readonly string NumberOfNights = "number_of_nights";
         public static readonly string NumberOfPassengers = "number_of_passengers";
         public static readonly string NumberOfRooms = "number_of_rooms";
@@ -44,13 +47,12 @@ namespace Plugin.FirebaseAnalytics
         public static readonly string SignUpMethod = "sign_up_method";
         public static readonly string Source = "source";
         public static readonly string StartDate = "start_date";
+        public static readonly string Success = "success";
         public static readonly string Tax = "tax";
         public static readonly string Term = "term";
         public static readonly string TransactionId = "transaction_id";
         public static readonly string TravelClass = "travel_class";
         public static readonly string Value = "value";
         public static readonly string VirtualCurrencyName = "virtual_currency_name";
-        public static readonly string LevelName = "level_name";
-        public static readonly string Success = "success";
     }
 }

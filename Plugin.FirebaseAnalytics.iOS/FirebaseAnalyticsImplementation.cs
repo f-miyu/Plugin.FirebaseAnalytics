@@ -56,5 +56,10 @@ namespace Plugin.FirebaseAnalytics
         {
             Analytics.SetUserProperty(value, name);
         }
+
+        public void ResetAnalyticsData()
+        {
+            Analytics.ResetAnalyticsData();
+        }
     }
 }

@@ -14,6 +14,8 @@ namespace Plugin.FirebaseAnalytics
         public static readonly string EcommercePurchase = "ecommerce_purchase";
         public static readonly string GenerateLead = "generate_lead";
         public static readonly string JoinGroup = "join_group";
+        public static readonly string LevelEnd = "level_end";
+        public static readonly string LevelStart = "level_start";
         public static readonly string LevelUp = "level_up";
         public static readonly string Login = "login";
         public static readonly string PostScore = "post_score";
@@ -32,7 +34,5 @@ namespace Plugin.FirebaseAnalytics
         public static readonly string ViewItem = "view_item";
         public static readonly string ViewItemList = "view_item_list";
         public static readonly string ViewSearchResults = "view_search_results";
-        public static readonly string LevelStart = "level_start";
-        public static readonly string LevelEnd = "level_end";
     }
 }

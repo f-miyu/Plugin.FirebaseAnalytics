@@ -3,6 +3,7 @@ using Android.Content.PM;
 using Android.OS;
 using Prism;
 using Prism.Ioc;
+using Plugin.CurrentActivity;
 
 namespace Plugin.FirebaseAnalytics.Sample.Droid
 {
@@ -16,7 +17,7 @@ namespace Plugin.FirebaseAnalytics.Sample.Droid
 
             base.OnCreate(bundle);
 
-            FirebaseAnalytics.Init(this);
+            CrossCurrentActivity.Current.Init(this, bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App(new AndroidInitializer()));

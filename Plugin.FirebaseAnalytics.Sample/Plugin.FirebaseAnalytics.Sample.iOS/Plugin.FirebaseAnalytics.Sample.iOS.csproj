@@ -190,10 +190,10 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.3.0.967583" />
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.1.0.431" />
     <PackageReference Include="Xamarin.Firebase.iOS.Analytics">
-      <Version>5.1.4</Version>
+      <Version>5.1.4.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

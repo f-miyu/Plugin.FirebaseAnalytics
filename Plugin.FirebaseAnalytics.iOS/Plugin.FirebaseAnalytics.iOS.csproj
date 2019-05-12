@@ -50,7 +50,7 @@
       <HintPath>..\packages\Xamarin.Firebase.iOS.InstanceID.3.2.1\lib\Xamarin.iOS10\Firebase.InstanceID.dll</HintPath>
     </Reference>
     <Reference Include="Firebase.Analytics">
-      <HintPath>..\packages\Xamarin.Firebase.iOS.Analytics.5.1.4\lib\Xamarin.iOS10\Firebase.Analytics.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Firebase.iOS.Analytics.5.1.4.1\lib\Xamarin.iOS10\Firebase.Analytics.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -65,5 +65,5 @@
   <Import Project="..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.targets" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.targets')" />
   <Import Project="..\packages\Xamarin.Build.Download.0.4.11\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.11\build\Xamarin.Build.Download.targets')" />
   <Import Project="..\packages\Xamarin.Firebase.iOS.InstanceID.3.2.1\build\Xamarin.Firebase.iOS.InstanceID.targets" Condition="Exists('..\packages\Xamarin.Firebase.iOS.InstanceID.3.2.1\build\Xamarin.Firebase.iOS.InstanceID.targets')" />
-  <Import Project="..\packages\Xamarin.Firebase.iOS.Analytics.5.1.4\build\Xamarin.Firebase.iOS.Analytics.targets" Condition="Exists('..\packages\Xamarin.Firebase.iOS.Analytics.5.1.4\build\Xamarin.Firebase.iOS.Analytics.targets')" />
+  <Import Project="..\packages\Xamarin.Firebase.iOS.Analytics.5.1.4.1\build\Xamarin.Firebase.iOS.Analytics.targets" Condition="Exists('..\packages\Xamarin.Firebase.iOS.Analytics.5.1.4.1\build\Xamarin.Firebase.iOS.Analytics.targets')" />
 </Project>

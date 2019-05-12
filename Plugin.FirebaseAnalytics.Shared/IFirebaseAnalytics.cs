@@ -10,5 +10,6 @@ namespace Plugin.FirebaseAnalytics
         void SetCurrentScreen(string screenName, string screenClass);
         void SetUserId(string userId);
         void SetUserProperty(string name, string value);
+        void ResetAnalyticsData();
     }
 }
