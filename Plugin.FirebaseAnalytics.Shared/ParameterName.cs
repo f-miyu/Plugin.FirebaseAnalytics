@@ -34,7 +34,7 @@ namespace Plugin.FirebaseAnalytics
         public static readonly string LevelName = "level_name";
         public static readonly string Location = "location";
         public static readonly string Medium = "medium";
-        public static readonly string Method = "medium";
+        public static readonly string Method = "method";
         public static readonly string NumberOfNights = "number_of_nights";
         public static readonly string NumberOfPassengers = "number_of_passengers";
         public static readonly string NumberOfRooms = "number_of_rooms";
