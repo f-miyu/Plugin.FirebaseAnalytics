@@ -7,7 +7,7 @@
     <ProjectGuid>{31F05FB9-ABD7-416E-B891-6634505B18FB}</ProjectGuid>
     <Description>Cross platform plugin for Firebase Analytics</Description>
     <PackageId>Plugin.FirebaseAnalytics</PackageId>
-    <PackageVersion>2.0.0-pre2</PackageVersion>
+    <PackageVersion>2.0.0</PackageVersion>
     <Authors>f-miyu</Authors>
     <DevelopmentDependency>false</DevelopmentDependency>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>

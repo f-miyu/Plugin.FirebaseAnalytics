@@ -8,7 +8,7 @@ using Prism.AppModel;
 
 namespace Plugin.FirebaseAnalytics.Sample.ViewModels
 {
-    public class ViewModelBase : BindableBase, INavigationAware, IDestructible, IPageLifecycleAware
+    public class ViewModelBase : BindableBase, INavigationAware, IInitialize, IDestructible, IPageLifecycleAware
     {
         protected INavigationService NavigationService { get; private set; }
 
@@ -34,7 +34,7 @@ namespace Plugin.FirebaseAnalytics.Sample.ViewModels
 
         }
 
-        public virtual void OnNavigatingTo(INavigationParameters parameters)
+        public virtual void Initialize(INavigationParameters parameters)
         {
 
         }
