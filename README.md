@@ -49,7 +49,7 @@ CrossFirebaseAnalytics.Current.SetUserId(userId);
 
 ### Set screen name
 ```C#
-CrossFirebaseAnalytics.Current.SetCurrentScreen(screenName, screenClass));
+CrossFirebaseAnalytics.Current.SetCurrentScreen(screenName, screenClass);
 ```
 
 ### Get app instance id
