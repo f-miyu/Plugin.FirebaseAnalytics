@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace Plugin.FirebaseAnalytics
 {
     public class Parameter
@@ -19,6 +21,12 @@ namespace Plugin.FirebaseAnalytics
         }
 
         public Parameter(string name, double value)
+        {
+            Name = name;
+            Value = value;
+        }
+
+        public Parameter(string name, IEnumerable<IDictionary<string, object>> value)
         {
             Name = name;
             Value = value;

@@ -7,7 +7,7 @@ namespace Plugin.FirebaseAnalytics
     /// </summary>
     public class CrossFirebaseAnalytics
     {
-        static Lazy<IFirebaseAnalytics> implementation = new Lazy<IFirebaseAnalytics>(() => CreateFirebaseAnalytics(), System.Threading.LazyThreadSafetyMode.PublicationOnly);
+        static Lazy<IFirebaseAnalytics?> implementation = new Lazy<IFirebaseAnalytics?>(() => CreateFirebaseAnalytics(), System.Threading.LazyThreadSafetyMode.PublicationOnly);
 
         /// <summary>
         /// Gets if the plugin is supported on the current platform.
@@ -21,7 +21,7 @@ namespace Plugin.FirebaseAnalytics
         {
             get
             {
-                IFirebaseAnalytics ret = implementation.Value;
+                IFirebaseAnalytics? ret = implementation.Value;
                 if (ret == null)
                 {
                     throw NotImplementedInReferenceAssembly();
@@ -30,9 +30,9 @@ namespace Plugin.FirebaseAnalytics
             }
         }
 
-        static IFirebaseAnalytics CreateFirebaseAnalytics()
+        static IFirebaseAnalytics? CreateFirebaseAnalytics()
         {
-#if NETSTANDARD1_0 || NETSTANDARD2_0
+#if NETSTANDARD
             return null;
 #else
 #pragma warning disable IDE0022 // Use expression body for methods
