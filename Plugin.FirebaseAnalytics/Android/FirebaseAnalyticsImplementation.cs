@@ -137,7 +137,7 @@ namespace Plugin.FirebaseAnalytics
                     break;
                 case IEnumerable<IDictionary<string, object>> dictionaries:
                     {
-                        var bundles = new JavaList<IParcelable>();
+                        var bundles = new List<Bundle>();
                         foreach (var dictionary in dictionaries)
                         {
                             var newBundle = new Bundle();
@@ -147,7 +147,7 @@ namespace Plugin.FirebaseAnalytics
                             }
                             bundles.Add(newBundle);
                         }
-                        bundle.PutParcelableArrayList(name, bundles);
+                        bundle.PutParcelableArray(name, bundles.ToArray());
                         break;
                     }
                 default:
