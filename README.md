@@ -19,6 +19,7 @@ Firebase.Core.App.Configure();
 
 ### Android
 * Add google-services.json to Android project. Select GoogleServicesJson as build action. (If you can't select GoogleServicesJson, reload this android project.)
+* Target framework version needs to be Android 10.0.
 * This Plugin uses [Plugin.CurrentActivity](https://github.com/jamesmontemagno/CurrentActivityPlugin). Setup as follows in MainActivity.
 ```C#
 Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, bundle);
@@ -30,6 +31,13 @@ Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, bundle);
 CrossFirebaseAnalytics.Current.LogEvent(EventName.SelectContent,
                                         new Parameter(ParameterName.ItemId, itemId),
                                         new Parameter(ParameterName.ItemName, itemName));
+
+var parameters = new Dictionary<string, object>
+{
+    [ParameterName.ItemId] = 1,
+    [ParameterName.ItemName] = "test"
+};
+CrossFirebaseAnalytics.Current.LogEvent(EventName.SelectContent, parameters);
 ```
 
 ### Set user properties
@@ -57,9 +65,9 @@ var id = await CrossFirebaseAnalytics.Current.GetAppInstanceIdAsync();
 CrossFirebaseAnalytics.Current.ResetAnalyticsData();
 ```
 
-### Set parameters for Android
+### Set parameters
 ```C#
-Plugin.FirebaseAnalytics.FirebaseAnalytics.SetAnalyticsCollectionEnabled(enabled);
+CrossFirebaseAnalytics.Current.SetAnalyticsCollectionEnabled(enabled);
 
-Plugin.FirebaseAnalytics.FirebaseAnalytics.SetSessionTimeoutDuration(sessionTimeoutDuration);
+CrossFirebaseAnalytics.Current.SetSessionTimeoutDuration(sessionTimeoutDuration);
 ```
