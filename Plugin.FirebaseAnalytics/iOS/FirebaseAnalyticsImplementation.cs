@@ -16,10 +16,10 @@ namespace Plugin.FirebaseAnalytics
 
         public void LogEvent(string name, params Parameter[] parameters)
         {
-            NSDictionary<NSString, NSObject?>? dict = null;
+            NSDictionary<NSString, NSObject>? dict = null;
             if (parameters != null)
             {
-                dict = new NSDictionary<NSString, NSObject?>(
+                dict = new NSDictionary<NSString, NSObject>(
                     parameters.Select(p => new NSString(p.Name)).ToArray(),
                     parameters.Select(p => Convert(p.Value)).ToArray());
             }
